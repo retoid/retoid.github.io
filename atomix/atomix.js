@@ -643,8 +643,9 @@ function drawMap() {
         let y = floor(i / level.width) * gridSize;
         let spriteId = level.map[i];
         if (spriteId != 0xff) {
-            let spriteCoord =  spriteSheet.coords[spriteId];
-            image(spritesheet.image, x, z, spriteCoord[7]);
+            noStroke();
+            fill(70, 50, 0);
+            rect(x, y, gridSize, gridSize);
         }
         if (spriteId > 0x00 && spriteId < 0x10) {
             let spriteCoord = spriteSheet.coords[spriteId];
